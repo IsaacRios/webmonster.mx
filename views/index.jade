@@ -4,6 +4,22 @@ html(lang="en")
 		title WebMonster
 		meta(charset="utf-8")
 		link(href="css/bootswatch.css" rel="stylesheet")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
 	body
+		nav.navbar-default
+			.container-fluid
+				.navbar-header
+					button(type="button", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1").navbar-toggle.collapsed
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a(href="#").navbar-brand Logo
+				#bs-example-navbar-collapse-1.collapse.navbar-collapse 
+					ul.nav.navbar-nav
+						li: a(href="") 1
+						li: a(href="") 2
+						li: a(href="") 3
 		section
-		h1.text-success WebMonster Rules!
+		h1.text-success WebMonster
