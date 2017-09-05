@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+	head
+		title WebMonster
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(name="description", content="descripoción webmonstrosa")
+		link(rel='shorcut icon', href='imgs/iconBlue.png', type='image/png')
+		link(rel="stylesheet", href="css/wmStyle.css")
+		link(rel="stylesheet", href="css/materialize.min.css")
+		link(rel="stylesheet" href="css/font-awesome.min.css")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+	body
+		div.navbar-fixed
+			nav.blue-grey.darken-4
+				.nav-wrapper
+					a(href="#").brand-logo.center
+						img(src="imgs/logo_blueWM.png", alt="logo webmonster").wm-logo
+					a(href="#", data-activates="mobile-demo").button-collapse
+						i.material-icons menu
+					ul.hide-on-med-and-down
+						li: a(href="#") Inicio
+						li: a(href="#") Servicios
+						li: a(href="#") Contacto
+					ul#mobile-demo.side-nav
+						li: a(href="#") Inicio
+						li: a(href="#") Servicios
+						li: a(href="#") Contacto
+		section#header
+			.wm-container
+				h1 WebMonster
+		section#footer
+			.wm-basic-container
+				f2 #WeAreWebMonster
+			.wm-container
+				a(href="https://www.facebook.com/WebMonsterr/", target="_blank", title="Like!")
+					i(aria-hidden="true").fa.fa-facebook.wm-icons
+				a(href="https://twitter.com/WebMonsterMX", target="_blank", title="Follow the white rabit!")
+					i(aria-hidden="true").fa.fa-twitter.wm-icons
+				a(href="#Contact", title="Talk with the experts.")
+					i(aria-hidden="true").fa.fa-phone.wm-icons
+
+		script(type="text/javascript", src="https://code.jquery.com/jquery-3.2.1.min.js")
+		script(type="text/javascript", src="js/materialize.min.js")
+		script.
+			(document).ready(function(){
+				(".button-collapse").sideNav();
+				});

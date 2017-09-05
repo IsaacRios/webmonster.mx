@@ -1,0 +1,43 @@
+body{
+	background-color: black;
+	color: white;
+}
+.wm-basic-container{
+	text-align: center;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 50px;
+}
+.wm-container{
+	text-align: center;
+}
+.wm-icons{
+	margin: 1em;
+	font-size: 1.5em;
+	color: white;
+}
+.wm-icons:hover{
+	font-size: 1.8m;
+	color: black;
+}
+.wm-logo{
+	height: 1.5em;
+	opacity: .5;
+	padding-top: 10%;
+	padding-bottom: 5%;
+}
+#header{
+	margin-top: -100px;
+	background-color: black;
+	color: white;
+	min-height: 550px;
+}
+#footer{
+	background-color: #4A86E8;
+	color: white;
+	min-height: 150px;
+	height: 200px;
+	max-height: 300px;
+	width: 100%;
+	margin-top: -100px;
+}
