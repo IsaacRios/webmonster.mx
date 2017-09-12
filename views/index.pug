@@ -7,25 +7,26 @@ html(lang="en")
 		meta(name="description", content="descripoción webmonstrosa")
 		link(rel='shorcut icon', href='imgs/iconBlue.png', type='image/png')
 		link(rel="stylesheet", href="css/wmStyle.css")
-		link(rel="stylesheet", href="css/materialize.min.css")
+		link(rel="stylesheet", href="css/materialize.css")
 		link(rel="stylesheet" href="css/font-awesome.min.css")
 		link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
 	body
 		div.navbar-fixed
 			nav.blue-grey.darken-4
 				.nav-wrapper
-					a(href="#").brand-logo.center
+					a(href="http://www.webmonster.mx", title="Home").brand-logo.center
 						img(src="imgs/logo_blueWM.png", alt="logo webmonster").wm-logo
-					a(href="#", data-activates="mobile-demo").button-collapse
+					a(href="#", data-activates="collapseWindow").button-collapse
 						i.material-icons menu
 					ul.hide-on-med-and-down
-						li: a(href="#") Inicio
 						li: a(href="#") Servicios
 						li: a(href="#") Contacto
-					ul#mobile-demo.side-nav
-						li: a(href="#") Inicio
+					ul#collapseWindow.side-nav
 						li: a(href="#") Servicios
-						li: a(href="#") Contacto
+							i.material-icons build
+						li.divider
+						li: a(href="#").waves-effect Contacto
+							i.material-icons call
 		section#header
 			.wm-container
 				h1 WebMonster
@@ -41,8 +42,8 @@ html(lang="en")
 					i(aria-hidden="true").fa.fa-phone.wm-icons
 
 		script(type="text/javascript", src="https://code.jquery.com/jquery-3.2.1.min.js")
-		script(type="text/javascript", src="js/materialize.min.js")
+		script(type="text/javascript", src="js/materialize.js")
 		script.
-			(document).ready(function(){
-				(".button-collapse").sideNav();
+			jQuery(document).ready(function(){
+				jQuery (".button-collapse").sideNav();
 				});
