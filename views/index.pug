@@ -11,25 +11,33 @@ html(lang="en")
 		link(rel="stylesheet" href="css/font-awesome.min.css")
 		link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
 	body
-		div.navbar-fixed
-			nav.blue-grey.darken-4
-				.nav-wrapper
-					a(href="http://www.webmonster.mx", title="Home").brand-logo.center
-						img(src="imgs/logo_blueWM.png", alt="logo webmonster").wm-logo
-					a(href="#", data-activates="collapseWindow").button-collapse
-						i.material-icons menu
-					ul.hide-on-med-and-down
-						li: a(href="#") Servicios
-						li: a(href="#") Contacto
-					ul#collapseWindow.side-nav
-						li: a(href="#") Servicios
-							i.material-icons build
-						li.divider
-						li: a(href="#").waves-effect Contacto
-							i.material-icons call
+		nav.blue-grey.darken-4
+			a(href="#", title="Home").brand-logo.center
+				img(src="imgs/logo_blueWM.png", alt="logo webmonster").wm-logo
+			a(href="#", data-activates="collapseWindow").button-collapse
+				i.material-icons menu
+			ul.hide-on-med-and-down
+				li: a(href="#") Servicios
+				li: a(href="#") Contacto
+			ul#collapseWindow.side-nav
+				li.user-view
+					.background
+						img(src="imgs/lap.jpg", alt="").wm-backgroundImg
+				li: a(href="#") Desarrollo web
+					i.material-icons important_devices
+				li: a(href="#") Aplicaciones móviles
+					i.material-icons phonelink_setup
+				li: a(href="#") Ecommerce
+					i.material-icons store
+				li.divider
+				li: a(href="#") Infraestructura
+					i.material-icons cloud_done
+				li.divider
+				li: a(href="#").waves-effect Contacto
+					i.material-icons call
 		section#header
 			.wm-container
-				h1 WebMonster
+				h3 WebMonster
 		section#footer
 			.wm-basic-container
 				f2 #WeAreWebMonster
