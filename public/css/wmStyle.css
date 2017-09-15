@@ -30,6 +30,9 @@ body{
 	padding-top: 5%;
 	padding-bottom: 5%;
 }
+.wm-text{
+	color: white;
+}
 .background{ 
 	width: 100%;
 	height: 150px;
@@ -43,14 +46,15 @@ body{
 #header{
 	background-color: black;
 	color: white;
-	min-height: 350px;
+	min-height: 450px;
 }
 #footer{
 	background-color: #4A86E8;
 	color: white;
-	min-height: 150px;
-	height: 200px;
+	min-height: 250px;
 	max-height: 300px;
 	width: 100%;
 	margin-top: -100px;
+	position: fixed;
+	object-position: bottom;
 }

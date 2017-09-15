@@ -37,7 +37,13 @@ html(lang="en")
 					i.material-icons call
 		section#header
 			.wm-container
-				h3 WebMonster
+				div(data-indicators="true").carousel.carousel-slider
+					div(href="#one!").carousel-item.white-text
+						img(src="imgs/900.jpg", alt="carousel img1")
+					div(href="#two!").carousel-item.white-text
+						img(src="imgs/890.jpg", alt="carousel img2")
+					div(href="#three!").carousel-item.white-text
+						img(src="imgs/882.jpg", alt="carousel img3")
 		section#footer
 			.wm-basic-container
 				f2 #WeAreWebMonster
@@ -48,10 +54,11 @@ html(lang="en")
 					i(aria-hidden="true").fa.fa-twitter.wm-icons
 				a(href="#Contact", title="Talk with the experts.")
 					i(aria-hidden="true").fa.fa-phone.wm-icons
-
 		script(type="text/javascript", src="https://code.jquery.com/jquery-3.2.1.min.js")
 		script(type="text/javascript", src="js/materialize.js")
 		script.
 			jQuery(document).ready(function(){
 				jQuery (".button-collapse").sideNav();
+				jQuery('.carousel').carousel();
+				jQuery('.carousel.carousel-slider').carousel({duration: 100});
 				});
