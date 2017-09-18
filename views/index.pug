@@ -1,72 +1,18 @@
-doctype html
-html(lang="en")
-	head
-		title WebMonster
-		meta(charset="utf-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		meta(name="description", content="descripoción webmonstrosa")
-		link(rel='shorcut icon', href='imgs/iconBlue.png', type='image/png')
-		link(rel="stylesheet", href="css/wmStyle.css")
-		link(rel="stylesheet", href="css/materialize.css")
-		link(rel="stylesheet" href="css/font-awesome.min.css")
-		link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
-	body
-		nav.blue-grey.darken-4
-			a(href="#", title="Home").brand-logo.center
-				img(src="imgs/logo_blueWM.png", alt="logo webmonster").wm-logo
-			a(href="#", data-activates="collapseWindow").button-collapse
-				i.material-icons menu
-			ul.hide-on-med-and-down
-				li: a(href="#") Servicios
-				li: a(href="#") Contacto
-			ul#collapseWindow.side-nav
-				li.user-view
-					.background
-						img(src="imgs/lap.jpg", alt="").wm-backgroundImg
-				li: a(href="#") Desarrollo web
-					i.material-icons important_devices
-				li: a(href="#") Aplicaciones móviles
-					i.material-icons phonelink_setup
-				li: a(href="#") Ecommerce
-					i.material-icons store
-				li.divider
-				li: a(href="#") Infraestructura
-					i.material-icons cloud_done
-				li.divider
-				li: a(href="#").waves-effect Contacto
-					i.material-icons call
-		section#header
-			.wm-container
-				div(data-indicators="true").carousel.carousel-slider.center
-					div.carousel-fixed-item.center
-						a.btn.waves-effect.white.grey-text.darken-text-2 button
-					div(href="#one!").carousel-item.white-text.blue.darken-4
-						//img(src="imgs/900.jpg", alt="carousel img1")
-						h2 Consultoría en tecnologías de la información
-						p.white-text.wm-basic-container Empresa dedicada a brindar diversos productos y servicios para resolver problemas en el campo de la informática. Preparados para los cambios inminentes mediante la capacitación constante.
-					div(href="#two!").carousel-item.white-text.cyan
-						//img(src="imgs/890.jpg", alt="carousel img2")
-						h2 Misión
-						p.white-text.wm-basic-container Brindar diversos productos y servicios para resolver problemas en el campo de la informática de forma vanguardista poniendo en práctica la preparación que tiene nuestro cuerpo de trabajo adaptándose a las necesidades de cualquier sector social cuyo objetivo principal es su satisfacción desde el primer contacto; facilitando la libertad y medios de acceso a las tecnologías de la información.
-					div(href="#three!").carousel-item.white-text.indigo.darken-4
-						//img(src="imgs/882.jpg", alt="carousel img3")
-						h2 Visión
-						p.white-text.wm-basic-container Consolidarnos como empresa líder en el ramo de las tecnologías de la información para llegar a ser la primer opción del cliente. Conservando como valores primordiales la responsabilidad, puntualidad, honestidad, constancia y pulcritud que nos han distinguido hasta ahora. Estar preparados para los cambios inminentes mediante capacitación constante.
-		section#footer
-			.wm-basic-container
-				f2 #WeAreWebMonster
-			.wm-container
-				a(href="https://www.facebook.com/WebMonsterr/", target="_blank", title="Like!")
-					i(aria-hidden="true").fa.fa-facebook.wm-icons
-				a(href="https://twitter.com/WebMonsterMX", target="_blank", title="Follow the white rabit!")
-					i(aria-hidden="true").fa.fa-twitter.wm-icons
-				a(href="#Contact", title="Talk with the experts.")
-					i(aria-hidden="true").fa.fa-phone.wm-icons
-		script(type="text/javascript", src="https://code.jquery.com/jquery-3.2.1.min.js")
-		script(type="text/javascript", src="js/materialize.js")
-		script.
-			jQuery(document).ready(function(){
-				jQuery (".button-collapse").sideNav();
-				jQuery('.carousel').carousel();
-				jQuery('.carousel.carousel-slider').carousel({fullWidth: true});
-				});
+extends ./layout.pug
+block contenido
+	section#header
+		.wm-container
+			div(data-indicators="true").carousel.carousel-slider.center
+				div.carousel-fixed-item.center
+					a.btn.waves-effect.white.grey-text.darken-text-2 Servicios
+				div(href="#one!").carousel-item.white-text.blue.darken-4
+					h5 Consultoría en tecnologías de la información
+					p.white-text.wm-container Empresa dedicada a brindar diversos productos y servicios para resolver problemas en el campo de la informática. Preparados para los cambios inminentes mediante la capacitación constante.
+				div(href="#two!").carousel-item.white-text.cyan
+					h5 Misión
+					p.white-text.wm-container Brindar diversos productos y servicios para resolver problemas en el campo de la informática de forma vanguardista poniendo en práctica la preparación que tiene nuestro cuerpo de trabajo adaptándose a las necesidades de cualquier sector social cuyo objetivo principal es su satisfacción desde el primer contacto; facilitando la libertad y medios de acceso a las tecnologías de la información.
+				div(href="#three!").carousel-item.white-text.indigo.darken-4
+					h5 Visión
+					p.white-text.wm-container Consolidarnos como empresa líder en el ramo de las tecnologías de la información para llegar a ser la primer opción del cliente. Conservando como valores primordiales la responsabilidad, puntualidad, honestidad, constancia y pulcritud que nos han distinguido hasta ahora. Estar preparados para los cambios inminentes mediante capacitación constante.
+
+

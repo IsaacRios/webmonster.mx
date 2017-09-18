@@ -10,6 +10,8 @@ body{
 }
 .wm-container{
 	text-align: center;
+	padding-left: 3%;
+	padding-right: 3%;
 }
 .wm-icons{
 	margin: 1em;
