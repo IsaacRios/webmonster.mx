@@ -37,13 +37,21 @@ html(lang="en")
 					i.material-icons call
 		section#header
 			.wm-container
-				div(data-indicators="true").carousel.carousel-slider
-					div(href="#one!").carousel-item.white-text
-						img(src="imgs/900.jpg", alt="carousel img1")
-					div(href="#two!").carousel-item.white-text
-						img(src="imgs/890.jpg", alt="carousel img2")
-					div(href="#three!").carousel-item.white-text
-						img(src="imgs/882.jpg", alt="carousel img3")
+				div(data-indicators="true").carousel.carousel-slider.center
+					div.carousel-fixed-item.center
+						a.btn.waves-effect.white.grey-text.darken-text-2 button
+					div(href="#one!").carousel-item.white-text.blue.darken-4
+						//img(src="imgs/900.jpg", alt="carousel img1")
+						h2 Consultoría en tecnologías de la información
+						p.white-text.wm-basic-container Empresa dedicada a brindar diversos productos y servicios para resolver problemas en el campo de la informática. Preparados para los cambios inminentes mediante la capacitación constante.
+					div(href="#two!").carousel-item.white-text.cyan
+						//img(src="imgs/890.jpg", alt="carousel img2")
+						h2 Misión
+						p.white-text.wm-basic-container Brindar diversos productos y servicios para resolver problemas en el campo de la informática de forma vanguardista poniendo en práctica la preparación que tiene nuestro cuerpo de trabajo adaptándose a las necesidades de cualquier sector social cuyo objetivo principal es su satisfacción desde el primer contacto; facilitando la libertad y medios de acceso a las tecnologías de la información.
+					div(href="#three!").carousel-item.white-text.indigo.darken-4
+						//img(src="imgs/882.jpg", alt="carousel img3")
+						h2 Visión
+						p.white-text.wm-basic-container Consolidarnos como empresa líder en el ramo de las tecnologías de la información para llegar a ser la primer opción del cliente. Conservando como valores primordiales la responsabilidad, puntualidad, honestidad, constancia y pulcritud que nos han distinguido hasta ahora. Estar preparados para los cambios inminentes mediante capacitación constante.
 		section#footer
 			.wm-basic-container
 				f2 #WeAreWebMonster
@@ -60,5 +68,5 @@ html(lang="en")
 			jQuery(document).ready(function(){
 				jQuery (".button-collapse").sideNav();
 				jQuery('.carousel').carousel();
-				jQuery('.carousel.carousel-slider').carousel({duration: 100});
+				jQuery('.carousel.carousel-slider').carousel({fullWidth: true});
 				});
