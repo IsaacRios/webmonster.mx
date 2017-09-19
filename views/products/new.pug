@@ -3,7 +3,7 @@ block contenido
 	section
 		.wm-container-space
 			.row
-				form(method="post", action="/products").col.s12
+				form(method="post", action="/products", enctype="multipart/form-data").col.s12
 					.row
 						.input-field.col.s6
 							input(placeholder="Nombre del Producto", id="wm_product", type="text", class="validate", name="product")
@@ -19,6 +19,9 @@ block contenido
 							input(placeholder="Contraseña", id="wm_password", type="password", class="validate", name="password")
 							label(for="wm_password") Contraseña
 					.row
+						.input-field.col.s6
+							label Imagen del producto
+							input(type="file", name="image_avatar")
 						.input-field.col.s6
 							input(type="submit", value="Guardar").btn
 		
