@@ -13,6 +13,14 @@ body{
 	padding-left: 3%;
 	padding-right: 3%;
 }
+.wm-container-space{
+	margin-top: 10%;
+	margin-bottom: 15%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
 .wm-icons{
 	margin: 1em;
 	font-size: 1.5em;
@@ -54,9 +62,8 @@ body{
 	background-color: #4A86E8;
 	color: white;
 	min-height: 250px;
-	max-height: 300px;
+	max-height: 350px;
 	width: 100%;
-	margin-top: -100px;
-	position: fixed;
+	position: absolute;
 	object-position: bottom;
 }

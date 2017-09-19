@@ -1,0 +1,25 @@
+extends ../layout.pug
+block contenido
+	section
+		.wm-container-space
+			.row
+				form(method="post", action="/products").col.s12
+					.row
+						.input-field.col.s6
+							input(placeholder="Nombre del Producto", id="wm_product", type="text", class="validate", name="product")
+							label(for="wm_product") Producto
+						.input-field.col.s6
+							textarea(placeholder="Descripción del Producto", id="wm_description", type="text", class="validate", name="description")
+							label(for="wm_description") Descripción
+					.row
+						.input-field.col.s6
+							input(placeholder="Precio del producto", id="wm_pricing", type="number", class="validate", name="pricing")
+							label(for="wm_pricing") Precio
+						.input-field.col.s6
+							input(placeholder="Contraseña", id="wm_password", type="password", class="validate", name="password")
+							label(for="wm_password") Contraseña
+					.row
+						.input-field.col.s6
+							input(type="submit", value="Guardar").btn
+		
+	

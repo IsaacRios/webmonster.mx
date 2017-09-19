@@ -1,9 +1,14 @@
 var express = require ('express');
 var mongoose = require ('mongoose');
+var bodyParser = require('body-parser');
 
 var app = express();
 
 mongoose.connect("mongodb://localhost/webmonsterDB");
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
 var productSchema = {
 	title: String,
 	description: String,
@@ -32,14 +37,34 @@ product.save(function(err){
 	console.log(product);
 });
 */
+
+
 	respuesta.render("index");
 });
 
+app.post("/products",function(solicitud, respuesta){
+	if(solicitud.body.password == "12345678"){
+	var data = {
+			title: solicitud.body.title,
+			description: solicitud.body.description,
+			imageUrl: "data.png",
+			pricing: solicitud.body.pricing
+		}
 
+		var product = new Product(data);
 
-app.get("/services/new",function(solicitd, respuesta){
+		product.save(function(err){
+			console.log(product);
+			respuesta.render("index");
+		});
+	}else{
+		respuesta.render("products/new");
+	}
+});
 
-	respuesta.render("services/new")
+app.get("/products/new",function(solicitd, respuesta){
+
+	respuesta.render("products/new")
 
 })
 
