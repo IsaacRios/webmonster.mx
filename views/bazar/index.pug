@@ -1,0 +1,14 @@
+extends ../layout.pug
+block contenido
+	.wm-container
+		h2 Bazar WebMonster
+		p Productos inigualables de ayer y hoy
+		each product in products
+			.row
+				.col.s4
+					h4= product.title
+				.col.s4
+					p= product.description
+					img(src="#{ product.imageUrl }").col.s4
+				.col.s4
+					p #{product.pricing} Pesos

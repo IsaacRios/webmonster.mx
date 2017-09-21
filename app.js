@@ -27,16 +27,23 @@ var productSchema = {
 
 var Product = mongoose.model("Product", productSchema);
 
+
 app.set("view engine","pug");
 
 app.use(express.static("public"));
-
 
 app.get("/",function(solicitud,respuesta){
 	respuesta.render("index");
 });
 
-app.post("/products",middleware_upload,function(solicitud, respuesta){
+app.get("/bazar",function(solicitud, respuesta){
+	Product.find(function(error,documento){
+		if(error){ console.log(error);}
+		respuesta.render("bazar/index", { products: documento})
+	});
+});
+
+app.post("/bazar",middleware_upload,function(solicitud, respuesta){
 	if(solicitud.body.password == "12345678"){
 	var data = {
 			title: solicitud.body.title,
@@ -46,6 +53,7 @@ app.post("/products",middleware_upload,function(solicitud, respuesta){
 		}
 
 		var product = new Product(data);
+
 		if(solicitud.file){
 			cloudinary.uploader.upload(solicitud.file.path, 
 				function(result){
@@ -57,22 +65,17 @@ app.post("/products",middleware_upload,function(solicitud, respuesta){
 			});
 		}
 
-		/*console.log(solicitud.files);
 
-		product.save(function(err){
-			console.log(product);
-			respuesta.render("index");
-		});  */
 	}else{
-		respuesta.render("products/new");
+		respuesta.render("bazar/new");
 	}
 
 
 });
 
-app.get("/products/new",function(solicitd, respuesta){
+app.get("/bazar/new",function(solicitd, respuesta){
 
-	respuesta.render("products/new")
+	respuesta.render("bazar/new")
 
 })
 
